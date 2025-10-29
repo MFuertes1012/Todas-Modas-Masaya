@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: #ffe4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.login-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+h2 {
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+/* ===== CAMPOS DE TEXTO ===== */
+.input-group {
+    position: relative;
+    margin: 10px 0;
+}
+
+/* Icono principal (correo o candado) */
+.input-group ion-icon:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #d63384;
+    font-size: 20px;
+}
+
+/* Campo de entrada */
+.input-group input {
+    width: 100%;
+    padding: 12px 40px 12px 38px; /* espacio para los iconos */
+    border: 2px solid #f8b6c1;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 5px rgba(214,51,132,0.5);
+}
+
+/* ===== ICONO OJO (derecha) ===== */
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* 🔹 ahora sí se coloca al lado derecho */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #d63384;
+    font-size: 20px;
+}
+
+/* Efecto hover en el ojo */
+.eye-icon:hover {
+    color: #b2226b;
+}
+
+/* ===== BOTÓN ===== */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* ===== TOAST ===== */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    color: #333;
+    padding: 20px 20px 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    min-width: 250px;
+    text-align: center;
+}
+
+.toast button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.toast button:hover {
+    background-color: #218838;
+}

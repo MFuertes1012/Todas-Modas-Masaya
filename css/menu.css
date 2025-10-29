@@ -1,0 +1,252 @@
+/* ===== Tipografía Trodion (opcional, colócala en fonts/Trodion.ttf) ===== */
+@font-face {
+  font-family: 'Trodion';
+  src: url('../fonts/Trodion.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* ===== Variables globales ===== */
+:root {
+  --pink: #ff8ab1;
+  --sidebar: rgba(165, 162, 227, 0.9);
+  --icon: #6c6c6c; /* gris medio */
+  --active: #e014ca; /* fucsia activo */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #f6f6f6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px; /* 🔹 tamaño base */
+}
+
+/* ===== Barra superior ===== */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 25px;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.top-bar h1 {
+  margin: 0;
+  color: #fff;
+  font-family: 'Trodion', 'Times New Roman', serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* ===== Íconos de la parte derecha ===== */
+.top-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 18px;
+}
+
+.top-actions .top-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.top-actions .top-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* ===== Contenedor general ===== */
+.container {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 260px;
+  background: var(--sidebar);
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+/* Perfil superior */
+.profile {
+  text-align: center;
+  padding: 20px 14px 8px;
+}
+.profile-img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: block;
+}
+.nombre {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+}
+.correo {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+}
+.divider {
+  width: 80%;
+  margin: 10px auto;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Sección blanca ===== */
+.nav-section {
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.titulo-menu {
+  margin: 10px 16px 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* ===== Menú principal ===== */
+.menu ul {
+  list-style: none;
+}
+
+.item,
+.submenu-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+.item:hover,
+.submenu-header:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Iconos grises */
+.icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(178deg) brightness(88%) contrast(90%);
+}
+
+/* Item activo */
+.item.activo {
+  color: var(--active);
+  font-weight: 700;
+}
+.item.activo .icon {
+  filter: invert(21%) sepia(97%) saturate(6146%) hue-rotate(303deg) brightness(96%) contrast(102%);
+}
+
+/* ===== Submenús ===== */
+.submenu {
+  position: relative;
+}
+.submenu-header {
+  justify-content: space-between;
+}
+.submenu-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toggle-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  opacity: 0.9;
+}
+
+/* Contenedor del submenú */
+.submenu-list {
+  display: none;
+  position: static;
+  padding: 4px 0 8px 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.submenu.open > .submenu-list {
+  display: block;
+}
+
+/* Items internos con sangría */
+.submenu-list .item {
+  position: relative;
+  padding: 8px 16px 8px 56px;
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.submenu-list .item::before {
+  content: '›';
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #9aa0a6;
+}
+.submenu-list .item:hover {
+  color: var(--active);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* ===== Contenido principal ===== */
+main#contenido {
+  flex: 1 1 auto;
+  background: #f6f6f6;
+  padding: 24px 28px 32px;
+  overflow: auto;
+}
+
+main h2 {
+  margin: 0;
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+}
