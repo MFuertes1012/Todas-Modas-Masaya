@@ -65,8 +65,17 @@ if (!isset($_SESSION['correo'])) {
               <img src="img/inicio.svg" class="icon" alt=""> <span class="label">Inicio</span>
             </li>
 
-            <li class="item nivel1" onclick="mostrarContenido('Clientes')">
-              <img src="img/cliente.svg" class="icon" alt=""> <span class="label">Clientes</span>
+             <li class="submenu nivel1">
+              <div class="submenu-header">
+                <div class="left">
+                  <img src="img/cliente.svg" class="icon" alt=""><span class="label">Clientes</span>
+                </div>
+                <img src="img/mas.svg" class="toggle-icon" alt="toggle">
+              </div>
+              <ul class="submenu-list">
+                <li class="item" onclick="mostrarContenido('Clientes')">Registrar Cliente</li>
+                <li class="item" onclick="mostrarContenido('Departamentos')">Departamento</li>
+              </ul>
             </li>
 
             <!-- Empleado -->
