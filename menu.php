@@ -74,7 +74,7 @@ if (!isset($_SESSION['correo'])) {
                 <img src="img/mas.svg" class="toggle-icon" alt="toggle">
               </div>
               <ul class="submenu-list">
-                <li class="item" onclick="mostrarContenido('Clientes')">Registrar Cliente</li>
+                <li class="item" onclick="mostrarContenido('Cliesntes')">Registrar Cliente</li>
                 <li class="item" onclick="cargarModuloDepartamentos()">Departamentos</li>
               </ul>
             </li>
