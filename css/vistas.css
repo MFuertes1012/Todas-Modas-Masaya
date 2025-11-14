@@ -435,3 +435,22 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+/* Ajustes para la tabla venta*/
+
+#modalSalida .modal-content.large {
+  width: min(1100px, 98vw); 
+  max-height: 90vh;          
+  overflow-y: auto;          
+}
+
+#modalSalida .tabla-detalle {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#modalSalida .tabla-detalle select,
+#modalSalida .tabla-detalle input {
+  width: 100%;
+  box-sizing: border-box;
+}

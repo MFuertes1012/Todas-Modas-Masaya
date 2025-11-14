@@ -120,7 +120,7 @@ if (!isset($_SESSION['correo'])) {
               </div>
               <ul class="submenu-list">
                 <li class="item" onclick="cargarModuloCompras()">Compras</li>
-                <li class="item" onclick="mostrarContenido('Salida de inventario')">Salida de inventario</li>
+                <li class="item" onclick="cargarModuloSalidas()">Salida de inventario</li>
               </ul>
             </li>
 

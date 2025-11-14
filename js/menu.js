@@ -355,7 +355,7 @@ function cargarModuloCompras() {
     .then(html => {
       cont.innerHTML = html;
 
-      // CSS reutilizado (empleados.css)
+      
       if (!document.querySelector('link[href*="vistas.css"]')) {
         const l = document.createElement('link');
         l.rel   = 'stylesheet';
@@ -363,7 +363,6 @@ function cargarModuloCompras() {
         document.head.appendChild(l);
       }
 
-      // JS del módulo
       const prev = document.getElementById('mod-compras-js');
       if (prev) prev.remove();
 
@@ -378,3 +377,38 @@ function cargarModuloCompras() {
       alert('Error cargando Compras');
     });
 }
+
+window.cargarModuloSalidas = function () {
+    const cont = document.getElementById('contenido');
+
+    fetch('modulos/salidas/index.php', { credentials: 'same-origin' })
+      .then(r => {
+        if (!r.ok) throw new Error('No se pudo cargar Salidas');
+        return r.text();
+      })
+      .then(html => {
+        cont.innerHTML = html;
+
+      
+        if (!document.querySelector('link[href*="vistas.css"]')) {
+          const l = document.createElement('link');
+          l.rel   = 'stylesheet';
+          l.href  = 'css/vistas.css?v=' + Date.now();
+          document.head.appendChild(l);
+        }
+
+
+        const prev = document.getElementById('mod-salidas-js');
+        if (prev) prev.remove();
+
+        const s  = document.createElement('script');
+        s.id     = 'mod-salidas-js';
+        s.src    = 'js/salidas.js?v=' + Date.now(); 
+        s.defer  = true;
+        document.body.appendChild(s);
+      })
+      .catch(err => {
+        console.error(err);
+        alert('Error cargando Salidas de inventario');
+      });
+  };
