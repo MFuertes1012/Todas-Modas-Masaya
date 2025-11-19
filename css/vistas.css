@@ -454,3 +454,65 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+
+
+
+/* Para el módulo de Reportes  */
+.reportes-filtros {
+  flex-wrap: wrap;
+}
+
+/* Botón rojo para PDF */
+.btn-descargar {
+  background: #d93025;
+  color: #fff;
+  border: 0;
+  border-radius: 18px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-descargar:hover {
+  filter: brightness(0.95);
+}
+
+.preview-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 8px 0 6px 2px;
+}
+
+.preview-box {
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  padding: 10px 12px;
+  min-height: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+.preview-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.preview-box th,
+.preview-box td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.preview-box th {
+  background: #f5f5f5;
+  font-weight: 700;
+}

@@ -481,3 +481,39 @@ document.addEventListener('DOMContentLoaded', function () {
     window.cargarModuloInicio();
   }
 });
+
+
+// Cargar módulo de Reportes
+window.cargarModuloReportes = function () {
+  const cont = document.getElementById('contenido');
+  if (!cont) return;
+
+  fetch('modulos/reportes/index.php', { credentials: 'same-origin' })
+    .then(r => {
+      if (!r.ok) throw new Error('No se pudo cargar Reportes');
+      return r.text();
+    })
+    .then(html => {
+      cont.innerHTML = html;
+
+      if (!document.querySelector('link[href*="vistas.css"]')) {
+        const l = document.createElement('link');
+        l.rel   = 'stylesheet';
+        l.href  = 'css/vistas.css?v=' + Date.now();
+        document.head.appendChild(l);
+      }
+
+      const prev = document.getElementById('mod-reportes-js');
+      if (prev) prev.remove();
+
+      const s  = document.createElement('script');
+      s.id     = 'mod-reportes-js';
+      s.src    = 'js/reportes.js?v=' + Date.now();
+      s.defer  = true;
+      document.body.appendChild(s);
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Error cargando Reportes');
+    });
+};

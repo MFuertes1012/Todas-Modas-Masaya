@@ -140,7 +140,7 @@ if (!isset($_SESSION['correo'])) {
               </ul>
             </li>
 
-            <li class="item nivel1" onclick="mostrarContenido('Reportes')">
+            <li class="item nivel1" onclick="cargarModuloReportes()">
               <img src="img/reporte.svg" class="icon" alt=""> <span class="label">Reportes</span>
             </li>
 
