@@ -40,7 +40,7 @@ if (!isset($_SESSION['correo'])) { http_response_code(401); exit('No autorizado'
       <input type="hidden" name="IdDepartamento" id="IdDepartamento">
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/departamento.svg" alt=""> </div>
         <div class="form-field">
           <label for="Nombre">Nombre</label>
           <input type="text" name="Nombre" id="Nombre" required>

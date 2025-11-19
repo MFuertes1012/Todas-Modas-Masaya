@@ -57,7 +57,7 @@ if ($resDep) {
       <input type="hidden" name="IdCliente" id="IdCliente">
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/info.svg" alt=""> </div>
         <div class="form-field">
           <label for="Nombre">Nombre</label>
           <input type="text" name="Nombre" id="Nombre" required>
@@ -65,7 +65,7 @@ if ($resDep) {
       </div>
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/info.svg" alt=""> </div>
         <div class="form-field">
           <label for="Apellido">Apellido</label>
           <input type="text" name="Apellido" id="Apellido" required>
@@ -73,7 +73,7 @@ if ($resDep) {
       </div>
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/departamento.svg" alt=""> </div>
         <div class="form-field">
           <label for="IdDepartamento">Departamento</label>
           <select name="IdDepartamento" id="IdDepartamento" required>
@@ -88,7 +88,7 @@ if ($resDep) {
       </div>
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/direccion.svg" alt=""> </div>
         <div class="form-field">
           <label for="Direccion">Dirección</label>
           <input type="text" name="Direccion" id="Direccion">
@@ -96,7 +96,7 @@ if ($resDep) {
       </div>
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/telefono.svg" alt=""> </div>
         <div class="form-field">
           <label for="Telefono">Teléfono</label>
           <input type="text" name="Telefono" id="Telefono">
@@ -104,7 +104,7 @@ if ($resDep) {
       </div>
 
       <div class="form-row">
-        <div class="icon-slot"></div>
+        <div  class="icon-slot" > <img src="img/tipo.svg" alt=""> </div>
         <div class="form-field">
           <label for="TipoCliente">Tipo de cliente</label>
           <input type="text" name="TipoCliente" id="TipoCliente" placeholder="Ej: Frecuente, Mayorista, etc.">

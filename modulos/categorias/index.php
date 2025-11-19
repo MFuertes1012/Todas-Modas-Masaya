@@ -39,7 +39,7 @@ if (!isset($_SESSION['correo'])) { http_response_code(401); exit('No autorizado'
     <form id="formCategoria" autocomplete="off">
       <input type="hidden" name="IdCategoria" id="IdCategoria">
       <div class="form-row">
-        <div class="icon-slot"></div>
+         <div  class="icon-slot" > <img src="img/categorias.svg" alt=""> </div>
         <div class="form-field">
           <label for="Descripcion">Descripción</label>
           <input type="text" name="Descripcion" id="Descripcion" required>

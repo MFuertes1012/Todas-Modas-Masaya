@@ -154,16 +154,8 @@
 .form-row {
   display: flex;
   gap: 12px;
-  align-items: center;
+  align-items: flex-start;
   margin: 10px 0;
-}
-
-.icon-slot {
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-  background: #f1f1f1;
-  flex: 0 0 26px;
 }
 
 .form-field {
@@ -515,4 +507,26 @@
 .preview-box th {
   background: #f5f5f5;
   font-weight: 700;
+}
+
+
+/* Iconos */
+.icon-slot {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;        
+  justify-content: center;  
+
+  flex-shrink: 0;
+  margin-top: 18px;          
+}
+
+.icon-slot img,
+.icon-slot svg {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }
